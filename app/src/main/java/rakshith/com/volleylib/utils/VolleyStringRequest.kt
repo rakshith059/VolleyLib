@@ -1,4 +1,4 @@
-package quintype.com.volleylib.utils
+package rakshith.com.volleylib.utils
 
 import com.android.volley.AuthFailureError
 import com.android.volley.DefaultRetryPolicy

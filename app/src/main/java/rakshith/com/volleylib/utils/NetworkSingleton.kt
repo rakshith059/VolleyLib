@@ -1,4 +1,4 @@
-package quintype.com.volleylib.utils
+package rakshith.com.volleylib.utils
 
 import android.content.Context
 import com.android.volley.Request
