@@ -20,7 +20,7 @@ import java.net.CookiePolicy
  * Created AppController by rakshith on 10/1/18.
  */
 
-class AppController : Application() {
+open class AppController : Application() {
 
     private var mRequestQueue: RequestQueue? = null
     private var mImageLoader: ImageLoader? = null
