@@ -20,19 +20,20 @@ import java.net.CookiePolicy
  * Created AppController by rakshith on 10/1/18.
  */
 
-open class AppController : Application() {
+class AppController(mContext: Context) : Application() {
 
     private var mRequestQueue: RequestQueue? = null
     private var mImageLoader: ImageLoader? = null
     var cookieManager: CookieManager? = null
         private set
 
+    private val mContext = mContext
     val requestQueue: RequestQueue
         get() {
             if (mRequestQueue == null) {
                 cookieManager = CookieManager(null, CookiePolicy.ACCEPT_ALL)
                 CookieHandler.setDefault(cookieManager)
-                mRequestQueue = Volley.newRequestQueue(applicationContext)
+                mRequestQueue = Volley.newRequestQueue(mContext)
             }
 
             return mRequestQueue as RequestQueue
@@ -110,5 +111,11 @@ open class AppController : Application() {
         @get:Synchronized
         var instance: AppController? = null
             private set
+
+        fun init(mContext: Context) {
+            if (mContext != null) {
+                instance = AppController(mContext)
+            }
+        }
     }
 }
