@@ -112,7 +112,7 @@ class AppController(mContext: Context) : Application() {
         var instance: AppController? = null
             private set
 
-        fun init(mContext: Context) {
+        open fun init(mContext: Context) {
             if (mContext != null) {
                 instance = AppController(mContext)
             }
