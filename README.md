@@ -16,11 +16,15 @@ Add it in your root build.gradle at the end of repositories:
 			maven { url 'https://jitpack.io' }
 		}
 	}
+	
 Step 2. Add the dependency
 
 	dependencies {
 	        implementation 'com.github.rakshith059:VolleyLib:1.3'
 	}
+	
+Step 3. Initialize the Application class(Add the below line in your launching activity)
+        AppController.init(this)
 	
 Usage: For Get Request
 
