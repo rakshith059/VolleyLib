@@ -13,7 +13,7 @@ class VolleyStringRequest(method: Int, url: String, private val contentType: Str
     protected var mPriority: Request.Priority = Request.Priority.NORMAL
 
     init {
-        retryPolicy = DefaultRetryPolicy(INITIAL_TIMEOUT, MAX_RETRY, BACK_OFF_MULTIPLIER)
+        retryPolicy = DefaultRetryPolicy(AppController.INITIAL_TIMEOUT, AppController.MAX_RETRY, AppController.BACK_OFF_MULTIPLIER)
     }
 
     @Throws(AuthFailureError::class)
@@ -38,9 +38,9 @@ class VolleyStringRequest(method: Int, url: String, private val contentType: Str
         return mPriority
     }
 
-    companion object {
-        private val MAX_RETRY = 2 //Total Attempts is 3.
-        private val INITIAL_TIMEOUT = 7500 //7.5secs.
-        private val BACK_OFF_MULTIPLIER = 1.0f
-    }
+//    companion object {
+//        private val MAX_RETRY = 2 //Total Attempts is 3.
+//        private val INITIAL_TIMEOUT = 7500 //7.5secs.
+//        private val BACK_OFF_MULTIPLIER = 1.0f
+//    }
 }

@@ -2,6 +2,7 @@ package rakshith.com.volleylib.utils
 
 import android.app.Application
 import android.content.Context
+import android.net.NetworkRequest
 import android.net.wifi.WifiManager
 import android.provider.Settings
 import android.text.TextUtils
@@ -104,6 +105,9 @@ class AppController(mContext: Context) : Application() {
 
         var APP_VERSION: Float = 0.toFloat()
         var DEVICE_ID: String = ""
+        var MAX_RETRY = 2 //Total Attempts is 3.
+        var INITIAL_TIMEOUT = 7500 //7.5secs.
+        val BACK_OFF_MULTIPLIER = 1.0f
 
         val TAG = AppController::class.java
                 .simpleName
@@ -112,9 +116,32 @@ class AppController(mContext: Context) : Application() {
         var instance: AppController? = null
             private set
 
+        /**
+         * initializing the application class
+         */
         open fun init(mContext: Context) {
             if (mContext != null) {
                 instance = AppController(mContext)
+            }
+        }
+
+        /**
+         * Used to give max. no. of retries if the API gets failed default is 3 attempts
+         * 1 normal execution and 2 extra time
+         */
+        open fun maxRetry(mRetry: Int) {
+            if (mRetry != null) {
+                MAX_RETRY = mRetry
+            }
+        }
+
+        /**
+         * Used to give initial timeout in milliseconds
+         * deafult timeout is (7500 ms) 7.5 seconds
+         */
+        open fun initialTimeOutInMilli(mInitialTimeOut: Int) {
+            if (mInitialTimeOut != null) {
+                INITIAL_TIMEOUT = mInitialTimeOut
             }
         }
     }
