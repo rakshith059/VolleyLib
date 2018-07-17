@@ -4,10 +4,6 @@ To get a Git project into your build:
 
 Step 1. Add the JitPack repository to your build file
 
-gradle
-maven
-sbt
-leiningen
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
@@ -16,11 +12,16 @@ Add it in your root build.gradle at the end of repositories:
 			maven { url 'https://jitpack.io' }
 		}
 	}
+	
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.rakshith059:VolleyLib:1.3'
+	        implementation 'com.github.rakshith059:VolleyLib:1.0.0'
 	}
+	
+Step 3. Initialize the Application class(Add the below line in your launching activity)
+	
+	AppController.init(this)
 	
 Usage: For Get Request
 
