@@ -1,0 +1,46 @@
+{
+	"slug": "home",
+	"name": "Home",
+	"summary": "Home collection for Toddy",
+	"items": [{
+			"id": 10145,
+			"type": "collection",
+			"name": "Business Opportunities",
+			"slug": "business-opportunities"
+		},
+		{
+			"id": "86e5ccae-5fea-4a3a-97e7-d2b2f041b28d",
+			"type": "story",
+			"story": {
+				"author-name": "Tapan Bhat",
+				"headline": "Quotes of Muhammad Ali, The Greatest",
+				"slug": "sports/2016/06/12/quotes-of-muhammad-ali-the-greatest",
+				"summary": "Best quotes of Muhammad Ali",
+				"hero-image-s3-key": "quintype-demo/2016-06/6d8af7d2-c4c8-421d-b957-fb26ce6ac705/MA-1.jpeg"
+			}
+		},
+		{
+			"id": 7902,
+			"type": "collection",
+			"name": "Trending Now",
+			"slug": "toddy-home-sports"
+		},
+		{
+			"id": 7765,
+			"type": "collection",
+			"name": "Technology",
+			"slug": "madrid-slider"
+		},
+		{
+			"id": "86e5ccae-5fea-4a3a-97e7-d2b2f041b28d",
+			"type": "story",
+			"story": {
+				"author-name": "Tapan Bhat",
+				"headline": "Quotes of Muhammad Ali, The Greatest",
+				"slug": "sports/2016/06/12/quotes-of-muhammad-ali-the-greatest",
+				"summary": "Best quotes of Muhammad Ali",
+				"hero-image-s3-key": "quintype-demo/2016-06/6d8af7d2-c4c8-421d-b957-fb26ce6ac705/MA-1.jpeg"
+			}
+		}
+	]
+}
