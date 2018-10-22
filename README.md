@@ -16,7 +16,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.rakshith059:VolleyLib:1.0.0'
+	        implementation 'com.github.rakshith059:VolleyLib:1.3'
 	}
 	
 Step 3. Initialize the Application class(Add the below line in your launching activity)
